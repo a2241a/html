@@ -25,9 +25,12 @@
     
     <script type="text/javascript">
 
-      const BUTTON_CLICK_EVENT= document.getElementById('btn');
+      document.addEventListener('DOMContentLoaded', () => {
+        const BUTTON_CLICK_EVENT= document.getElementById('btn');
         BUTTON_CLICK_EVENT.addEventListener('click', () => {
-            alert("ボタンがクリックされました");
+          alert("ボタンがクリックされました");
+        });
+      });
       
     </script>
   </BODY>
