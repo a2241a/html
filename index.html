@@ -27,6 +27,8 @@
 
       document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn').addEventListener('click', () => {
+          const txt = document.getElementById("in").textContent;
+          document.getElementById("out").textContent = txt;
           alert("ボタンがクリックされました！");
           const blob = new Blob([txt], { type: 'text/plain' });
           const a = document.createElement('a');
