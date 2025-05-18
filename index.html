@@ -12,7 +12,7 @@
   </HEAD>
   <BODY>
     
-    <button type="button" id="btn">実行</button>
+    <button id="btn">実行</button>
     <label for="in">入力：</label>
     <input type="in" id="txt"/>
     出力：
@@ -22,7 +22,13 @@
       
       document.getElementById("btn").addEventListener("click", btnClick);
       function btnClick() {
-        document.getElementById("out").textContent = document.getElementById("in").value;
+        txt = document.getElementById("in").value;
+        document.getElementById("out").value　= txt
+        const blob = new Blob([txt], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href =  URL.createObjectURL(blob);
+        a.download = 'sample.txt';
+        a.click();
       };
       
     </script>
