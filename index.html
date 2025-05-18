@@ -8,12 +8,13 @@
 <TITLE>Top HTML Tags</TITLE>
 </HEAD>
 <BODY>
-  HTML is swell.
+  <p id="str">HTML is swell.</p>
   Life is good.
-  <label for="name">Name (4 to 8 characters):</label>
-  <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+  <label for="txt">txt:</label>
+  <input type="text" id="txt" name="txt" />
 <script type="text/javascript">
-  
+  const txt = document.getElementById("txt");
+  document.getElementById("str").textContent = txt
 </script>
 </BODY>
 </HTML>
