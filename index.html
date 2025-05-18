@@ -1,20 +1,29 @@
 <HTML>
-<HEAD>
-<style>
-  label{
-    color: blue;
-  }
-</style>
-<TITLE>Top HTML Tags</TITLE>
-</HEAD>
-<BODY>
-  <p id="str">HTML is swell.</p>
-  Life is good.
-  <label for="txt">txt:</label>
-  <input type="text" id="txt" name="txt" />
-<script type="text/javascript">
-  const txt = document.getElementById("txt");
-  document.getElementById("str").textContent = txt;
-</script>
-</BODY>
+  <HEAD>
+    <style>
+    
+      label{
+        color: blue;
+      }
+    
+    </style>
+    <TITLE>Top HTML Tags</TITLE>
+  </HEAD>
+  <BODY>
+    
+    <button type="button" id="btn">実行</button>
+    <label for="in">入力：</label>
+    <input type="in" id="txt"/>
+    出力：
+    <p id="out"></p>
+    
+    <script type="text/javascript">
+      
+      document.getElementById("btn").addEventListener("click", btnClick);
+      function btnClick() {
+        document.getElementById("out").textContent = document.getElementById("in").value;
+      };
+      
+    </script>
+  </BODY>
 </HTML>
