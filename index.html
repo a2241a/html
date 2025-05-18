@@ -24,17 +24,10 @@
     <p id="out"></p>
     
     <script type="text/javascript">
-      
-      document.getElementById("btn").addEventListener("click", btnClick);
-      function btnClick() {
-        const txt = document.getElementById("in").value;
-        document.getElementById("out").textContent　= txt
-        //const blob = new Blob([txt], { type: 'text/plain' });
-        //const a = document.createElement('a');
-        //a.href =  URL.createObjectURL(blob);
-        //a.download = 'sample.txt';
-        //a.click();
-      };
+
+      const BUTTON_CLICK_EVENT= document.getElementById('btn');
+        BUTTON_CLICK_EVENT.addEventListener('click', () => {
+            alert("ボタンがクリックされました");
       
     </script>
   </BODY>
