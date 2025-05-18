@@ -29,12 +29,12 @@
         document.getElementById('btn').addEventListener('click', () => {
           const txt = document.getElementById("in").textContent;
           document.getElementById("out").textContent = txt;
-          alert("ボタンがクリックされました！");
+          alert("ボタンがクリックされました");
           const blob = new Blob([txt], { type: 'text/plain' });
           const a = document.createElement('a');
           a.href =  URL.createObjectURL(blob);
           a.download = 'sample.txt';
-          //a.click();
+          a.click();
           
         });
       });
